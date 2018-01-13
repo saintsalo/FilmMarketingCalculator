@@ -1,5 +1,5 @@
-# FilmMarketingCalculator
-Film Marketing ROI Calculator
+# Film Marketing Calculator
+Film Marketing Calculator used to gather Estimated ROI
 
 ## Input Values:
 - Total Number of Tickets Available
@@ -13,6 +13,8 @@ Film Marketing ROI Calculator
 - Expected Number of Clicks
 - Expected Number of Tickets Sold
 - Expected Filmmaker Revenue
+
+
 
 
 
