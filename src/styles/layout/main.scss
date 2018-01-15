@@ -3,6 +3,10 @@ body {
 	color: #555;
 }
 
+button:focus,
+input:focus
+{outline:0;}
+
 .navbar-custom {
 	background-color: #000000;
 	padding-left: 25px;
@@ -18,10 +22,9 @@ body {
 	color: #ffffff;
 }
 
-// .navbar-brand {
-// 	margin-top: 10px;
-// 	font-weight: 200;
-// }
+.navbar-brand {
+	font-weight: 200;
+}
 
 .logo {
 	height: 70px;
@@ -59,9 +62,7 @@ footer {
 	font-size: 25px;
 }
 
-.result-sticky {
-
-}
+.result-sticky {}
 
 h3.light {
 	color: #555555;
@@ -74,30 +75,36 @@ h6.result-header {
 	font-size: 17px;
 	font-weight: 200;
 }
-
+// .jumbotron-custom {
+// 	background-color: #000000;
+// 	color: #FFFFFF;
+// }
 // Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) {
-
-}
-
+@media (min-width: 576px) {}
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-	.result-sticky {
+	.result-sticky.desktop {
+		visibility: visible;
+		display: block;
+	}
 
+	.result-sticky.phone {
+		visibility: hidden;
+		display: none;
 	}
 }
-
-// Medium devices (tablets, 768px and up)
 @media (max-width: 768px) {
+	.result-sticky.desktop {
+		visibility: hidden;
+		display: none;
+	}
 
+	.result-sticky.phone {
+		visibility: visible;
+		display: block;
+	}
 }
-
 // Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-
-}
-
+@media (min-width: 992px) {}
 // Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-
-}
+@media (min-width: 1200px) {}

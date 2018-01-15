@@ -39,22 +39,23 @@ class Calculator extends Component {
 		} = this.props.amounts.theatrical
 		return (
 			<StickyContainer>
-
 				<div className="row">
-
-					<div className="col-lg-4 col-md-4 col-sm-4">
+					<div className="col-lg-4 col-md-5 col-sm-12">
 						<Sticky distanceFromTop={10}>{({ style }) => {
 								return (
-									<div className="result-sticky" style={style}>
+									<div className="result-sticky desktop" style={style}>
 										<Results/>
 									</div>
 								)
 							}
-}
+						}
 						</Sticky>
+						<div className="result-sticky phone">
+							<Results />
+						</div>
 					</div>
 
-					<div className="col-lg-8 col-md-8 col-sm-8">
+					<div className="col-lg-8 col-md-7 col-sm-12">
 						<form>
 
 							<div className="form-group row">
