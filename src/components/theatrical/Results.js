@@ -23,7 +23,7 @@ class Results extends Component {
 		return (
 			<div className="row results">
 				<div className="col-lg-12 border-bottom text-center">
-					<h3>Results</h3>
+					<h3 className="light">Results</h3>
 				</div>
 				<div className="col-lg-12 border-bottom text-center">
 					<h6 className="result-header">
