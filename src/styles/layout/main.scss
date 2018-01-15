@@ -1,0 +1,77 @@
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	color: #555;
+}
+
+.logo {
+	height: 50px;
+	width: 50px;
+}
+
+.bg-black {
+	background-color: black;
+}
+
+footer {
+	padding: 25px;
+	text-align: center;
+	color: #ffffff;
+}
+
+.copyright {
+	font-size: 11px;
+	font-weight: 200;
+}
+
+.results {
+	background-color: #f7f7f7;
+	padding: 10px;
+	z-index: 999;
+	opacity: 1;
+}
+
+.border-bottom {
+	border-bottom: 1px solid #FFFFFF;
+}
+
+.result-number {
+	font-size: 25px;
+}
+
+.result-sticky {
+
+}
+
+h6.result-header {
+	margin-top: 16px;
+	margin-bottom: 1px;
+	font-size: 17px;
+	font-weight: 200;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+	.result-sticky {
+		
+	}
+}
+
+// Medium devices (tablets, 768px and up)
+@media (max-width: 768px) {
+
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+
+}
