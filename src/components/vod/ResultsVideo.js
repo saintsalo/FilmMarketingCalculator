@@ -3,9 +3,7 @@ import { connect } from 'react-redux';
 import { calcEstimatedClicks, calcTicketsSold, calcFilmmakerRevenue, calcTicketsExcess } from '../../utils/calculations';
 import { formatCurrency } from '../../utils/helpers';
 
-class Results extends Component {
-	
-
+class ResultsVideo extends Component {
 	render(){
 
 		const {
@@ -25,7 +23,7 @@ class Results extends Component {
 		return (
 			<div className="row results">
 				<div className="col-lg-12 border-bottom text-center">
-					<h3 className="light">Results</h3>
+					<h3 className="light">VOD Results</h3>
 				</div>
 				<div className="col-lg-12 border-bottom text-center">
 					<h6 className="result-header">
@@ -64,4 +62,4 @@ function mapStateToProps( state ) {
 	 };
 }
 
-export default connect(mapStateToProps)(Results);
+export default connect(mapStateToProps)(ResultsVideo);

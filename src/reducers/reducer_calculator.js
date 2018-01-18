@@ -5,7 +5,7 @@ export const defaultCalculatorState = {
 		ticketCount: {
 			value: 50,
 			min: 0,
-			max: 5000,
+			max: 2000,
 			step: 1
 		},
 		ticketPrice: {
@@ -21,16 +21,16 @@ export const defaultCalculatorState = {
 			step: 1
 		},
 		costPerClick: {
-			value: 2,
-			min: 0,
-			max: 50,
-			step: .1
+			value: 3.50,
+			min: 0.1,
+			max: 20,
+			step: 0.1
 		},
 		conversionRate: {
-			value: 5,
+			value: 2.6,
 			min: 0.1,
 			max: 50,
-			step: .1
+			step: 0.1
 		},
 		socialMediaBudget: {
 			value: 1500,
@@ -40,12 +40,42 @@ export const defaultCalculatorState = {
 		}
 	},
 	vod: {
-		purchasePrice: 0,
-		rentalPrice: 0,
-		filmmakerCut: 0,
-		costPerClick: 0,
-		conversionRate: 0,
-		socialMediaBudget: 500
+		purchasePrice: {
+			value: 12.50,
+			min: 0.25,
+			max: 50,
+			step: 0.25
+		},
+		rentalPrice: {
+			value: 4.50,
+			min: 0.25,
+			max: 20,
+			step: 0.25
+		},
+		filmmakerCut: {
+			value: 15,
+			min: 1,
+			max: 100,
+			step: 1
+		},
+		costPerClick: {
+			value: 2,
+			min: 0.1,
+			max: 50,
+			step: 0.1
+		},
+		conversionRate: {
+			value: 5,
+			min: 0.1,
+			max: 50,
+			step: 0.1
+		},
+		socialMediaBudget: {
+			value: 1500,
+			min: 100,
+			max: 10000,
+			step: 10
+		},
 	}
 }
 

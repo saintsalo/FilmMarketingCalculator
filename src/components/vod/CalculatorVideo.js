@@ -5,9 +5,9 @@ import { bindActionCreators } from 'redux';
 import { formatCurrency, formatPercentage, addComma, } from '../../utils/helpers'
 import { StickyContainer, Sticky, } from 'react-sticky'
 
-import Results from './Results'
+import ResultsVideo from './ResultsVideo'
 
-class Calculator extends Component {
+class CalculatorVideo extends Component {
 	constructor( props ) {
 		super( props )
 		// this.state = {
@@ -43,14 +43,14 @@ class Calculator extends Component {
 						<Sticky distanceFromTop={10}>{({ style }) => {
 								return (
 									<div className="result-sticky desktop" style={style}>
-										<Results/>
+										<ResultsVideo />
 									</div>
 								)
 							}
 						}
 						</Sticky>
 						<div className="result-sticky phone">
-							<Results />
+							<ResultsVideo />
 						</div>
 					</div>
 
@@ -227,4 +227,4 @@ function mapDispatchToProps( dispatch ) {
 	}, dispatch );
 }
 
-export default connect( mapStateToProps, mapDispatchToProps )( Calculator )
+export default connect( mapStateToProps, mapDispatchToProps )( CalculatorVideo )

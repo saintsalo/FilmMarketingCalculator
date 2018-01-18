@@ -54,6 +54,16 @@ footer {
 	opacity: 1;
 }
 
+.hidden {
+	display: none;
+}
+
+.sold-out {
+	font-size: 12px;
+	position: absolute;
+	float: right;
+}
+
 .border-bottom {
 	border-bottom: 1px solid #FFFFFF;
 }
