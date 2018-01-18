@@ -55,29 +55,3 @@ module.exports = {
 	},
 	plugins: [new ExtractTextPlugin({ filename: "main.css" })],
 }
-// module: {
-// 	loaders: [
-// 		{
-// 			test: /\.js$/,
-// 			exclude: /node_modules/,
-// 			loader: 'babel-loader',
-// 			query: {
-// 				presets: [ 'react', 'es2015', ]
-// 			}
-// 		}, {
-// 			test: /\.scss$/,
-// 			use: [ 'css-hot-loader' ].concat(ExtractTextPlugin.extract({
-// 				fallback: 'style-loader',
-// 				use: [
-// 					{
-// 						loader: "sass-loader"
-// 					}
-// 				],
-// 			})),
-// 		},
-// 	},
-// 	plugins: [new ExtractTextPlugin({
-// 			filename: "[name].css",
-// 			disable: process.env.NODE_ENV === "development",
-// 		})],
-// };
