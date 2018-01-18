@@ -1,6 +1,24 @@
+html {
+	height: 100%;
+}
+
 body {
+	display: flex;
+  flex-direction: column;
+  height: 100vh;
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #555;
+}
+
+.content {
+  flex: 1 0 auto;
+}
+
+.footer {
+	flex-shrink: 0;
+	padding: 25px;
+	text-align: center;
+	color: #eceeef;
 }
 
 button:focus,
@@ -26,6 +44,18 @@ input:focus
 	font-weight: 200;
 }
 
+.nav-link {
+	font-weight: 300;
+}
+
+.nav-item .nav-link:hover {
+	color: #2594C8 !important;
+}
+
+.nav-item .nav-link.active {
+	color: #2594C8 !important;
+}
+
 .logo {
 	height: 70px;
 	width: 70px;
@@ -36,11 +66,7 @@ input:focus
 	background-color: black;
 }
 
-footer {
-	padding: 25px;
-	text-align: center;
-	color: #eceeef;
-}
+
 
 .copyright {
 	font-size: 11px;
@@ -79,12 +105,36 @@ h3.light {
 	font-weight: 400;
 }
 
+h3.light i {
+	font-size: 15px;
+	vertical-align: middle;
+}
+
 h6.result-header {
 	margin-top: 16px;
 	margin-bottom: 1px;
 	font-size: 17px;
 	font-weight: 200;
 }
+
+.jumbotron-small {
+	padding: 10px;
+	text-align: center;
+	background-color: #2594C8;
+	color: #FFFFFF;
+	font-weight: 100;
+	font-size: 2rem;
+}
+
+.info-results {
+	font-size: 12px;
+	padding: 10px 5px;
+}
+
+.info {
+	font-size: 12px;
+}
+
 // .jumbotron-custom {
 // 	background-color: #000000;
 // 	color: #FFFFFF;

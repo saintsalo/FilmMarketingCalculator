@@ -25,3 +25,19 @@ export function calcFilmmakerRevenue(estimatedTicketsSold, ticketCount, ticketPr
 	let x = ((parseInt(tickets) * parseInt(ticketPrice)) * filmmakerCut);
 	return x;
 }
+
+// VOD
+
+export function calcEstimatedVodSales(estimatedClicks, conversionRate, percent) {
+	conversionRate = (conversionRate / 100);
+	let x = (parseInt(estimatedClicks) * conversionRate) * percent;
+	x = Math.floor(x);
+	return x;
+}
+
+export function calcEstimatedFilmmakerVod(estimatedRentals, estimatedSales, rentalPrice, purchasePrice,
+filmmakerCut) {
+	filmmakerCut = (parseInt(filmmakerCut) / 100);
+	let x = ((estimatedRentals * rentalPrice) + (estimatedSales * purchasePrice)) * filmmakerCut;
+	return x;
+}

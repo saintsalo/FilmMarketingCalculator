@@ -140,7 +140,7 @@ class Calculator extends Component {
 										Estimated Cost Per Click
 									</label>
 									<p className="lead lead-header">How much are you willing to pay for a click?</p>
-									<p className="info">Depending on the ad network and audience, B2B marketers can expect cost-per-click to range from $1-$7 or more. You can use the Google KeyWord Planner for help estimating your CPC for search ads.</p>
+									<p className="info">Depending on the ad network and audience, B2B marketers can expect cost-per-click to range from $1-$7 or more. You can use the <a href="https://adwords.google.com/home/tools/keyword-planner/" target="_blank">Google KeyWord Planner</a> for help estimating your CPC for search ads.</p>
 									<span className="slidercontainer">
 										<input name="costPerClick" type="range" min={costPerClick.min} max={costPerClick.max} value={costPerClick.value} className="slider" id="myRange" onChange={this.handleInputChange} step={costPerClick.step}/>
 										<div className="float-left min">

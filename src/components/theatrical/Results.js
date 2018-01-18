@@ -4,10 +4,8 @@ import { calcEstimatedClicks, calcTicketsSold, calcFilmmakerRevenue, calcTickets
 import { formatCurrency } from '../../utils/helpers';
 
 class Results extends Component {
-	
 
 	render(){
-
 		const {
 			ticketCount,
 			ticketPrice,
@@ -25,7 +23,7 @@ class Results extends Component {
 		return (
 			<div className="row results">
 				<div className="col-lg-12 border-bottom text-center">
-					<h3 className="light">Results</h3>
+					<h3 className="light"><i className="fa fa-calculator" aria-hidden="true"></i> Results</h3>
 				</div>
 				<div className="col-lg-12 border-bottom text-center">
 					<h6 className="result-header">

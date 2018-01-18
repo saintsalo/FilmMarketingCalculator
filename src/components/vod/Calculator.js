@@ -5,37 +5,34 @@ import { bindActionCreators } from 'redux';
 import { formatCurrency, formatPercentage, addComma, } from '../../utils/helpers'
 import { StickyContainer, Sticky, } from 'react-sticky'
 
-import ResultsVideo from './ResultsVideo'
+import Results from './Results'
 
 class CalculatorVideo extends Component {
 	constructor( props ) {
 		super( props )
-		// this.state = {
-		// 	showSliders: true
-		// }
 		this.handleInputChange = this.handleInputChange.bind( this );
 	}
 
 	handleInputChange( event ) {
-		const { theatrical } = this.props.amounts;
+		const { vod } = this.props.amounts;
 		const target = event.target;
 		const value = target.type === 'checkbox'
 			? target.checked
 			: target.value;
 		const name = target.name;
-		theatrical[name].value = value;
+		vod[name].value = value;
 		this.props.updateCalculations( this.props.amounts )
 	}
 
 	render( ) {
 		const {
-			ticketCount,
-			ticketPrice,
+			purchasePrice,
+			rentalPrice,
 			filmmakerCut,
 			costPerClick,
 			conversionRate,
 			socialMediaBudget,
-		} = this.props.amounts.theatrical
+		} = this.props.amounts.vod
 		return (
 			<StickyContainer>
 				<div className="row">
@@ -43,14 +40,14 @@ class CalculatorVideo extends Component {
 						<Sticky distanceFromTop={10}>{({ style }) => {
 								return (
 									<div className="result-sticky desktop" style={style}>
-										<ResultsVideo />
+										<Results />
 									</div>
 								)
 							}
 						}
 						</Sticky>
 						<div className="result-sticky phone">
-							<ResultsVideo />
+							<Results />
 						</div>
 					</div>
 
@@ -60,24 +57,22 @@ class CalculatorVideo extends Component {
 							<div className="form-group row">
 								<div className="col-sm-9">
 									<label className="col-form-label">
-										Ticket Count
+										Purchase Price
 									</label>
-									{/* <span className="edit"><i className="fa fa-pencil-square-o" aria-hidden="true"></i></span> */}
-
-									<p className="lead lead-header">How many tickets do you expect to have available?</p>
+									<p className="lead lead-header">How much do you plan to sell your video?</p>
 									<span className="slidercontainer">
-										<input name="ticketCount" type="range" min={ticketCount.min} max={ticketCount.max} value={ticketCount.value} className="slider" id="myRange" onChange={this.handleInputChange} step={ticketCount.step}/>
+										<input name="purchasePrice" type="range" min={purchasePrice.min} max={purchasePrice.max} value={purchasePrice.value} className="slider" id="myRange" onChange={this.handleInputChange} step={purchasePrice.step}/>
 										<div className="float-left min">
-											{ticketCount.min}
+											{purchasePrice.min}
 										</div>
 										<div className="float-right max">
-											{addComma( ticketCount.max )}
+											{addComma( purchasePrice.max )}
 										</div>
 									</span>
 								</div>
 								<div className="col-sm-3 text-right">
 									<span className="display-number number">
-										{addComma( ticketCount.value )}
+										{formatCurrency(purchasePrice.value, true)}
 									</span>
 								</div>
 							</div>
@@ -87,22 +82,22 @@ class CalculatorVideo extends Component {
 							<div className="form-group row">
 								<div className="col-sm-9">
 									<label className="col-form-label">
-										Ticket Price
+										Rental Price
 									</label>
-									<p className="lead lead-header">How much do you plan to sell your tickets for?</p>
+									<p className="lead lead-header">How much do you plan to rent your video?</p>
 									<span className="slidercontainer">
-										<input name="ticketPrice" type="range" min={ticketPrice.min} max={ticketPrice.max} value={ticketPrice.value} className="slider" id="myRange" onChange={this.handleInputChange} step={ticketPrice.step}/>
+										<input name="rentalPrice" type="range" min={rentalPrice.min} max={rentalPrice.max} value={rentalPrice.value} className="slider" id="myRange" onChange={this.handleInputChange} step={rentalPrice.step}/>
 										<div className="float-left min">
-											{formatCurrency( ticketPrice.min )}
+											{formatCurrency( rentalPrice.min )}
 										</div>
 										<div className="float-right max">
-											{formatCurrency( ticketPrice.max, false )}
+											{formatCurrency( rentalPrice.max, false )}
 										</div>
 									</span>
 								</div>
 								<div className="col-sm-3 text-right">
 									<span className="display-number price">
-										{formatCurrency( ticketPrice.value )}
+										{formatCurrency( rentalPrice.value )}
 									</span>
 								</div>
 							</div>
@@ -140,7 +135,7 @@ class CalculatorVideo extends Component {
 										Estimated Cost Per Click
 									</label>
 									<p className="lead lead-header">How much are you willing to pay for a click?</p>
-									<p className="info">Depending on the ad network and audience, B2B marketers can expect cost-per-click to range from $1-$7 or more. You can use the Google KeyWord Planner for help estimating your CPC for search ads.</p>
+									<p className="info">Depending on the ad network and audience, B2B marketers can expect cost-per-click to range from $1-$7 or more. You can use the <a href="https://adwords.google.com/home/tools/keyword-planner/" target="_blank">Google KeyWord Planner</a> for help estimating your CPC for search ads.</p>
 									<span className="slidercontainer">
 										<input name="costPerClick" type="range" min={costPerClick.min} max={costPerClick.max} value={costPerClick.value} className="slider" id="myRange" onChange={this.handleInputChange} step={costPerClick.step}/>
 										<div className="float-left min">
@@ -165,8 +160,8 @@ class CalculatorVideo extends Component {
 									<label className="col-form-label">
 										Target Conversion Rate
 									</label>
-									<p className="lead lead-header">How often does a visitor convert into a lead on your website?</p>
-									<p className="info">For the average for B2B marketers it's around 2.6%. Check out these 10 Tips to improve your conversion rate (CVR).</p>
+									<p className="lead lead-header">How often does your ad convert into a lead on your website?</p>
+									<p className="info">For the average B2B it's around 2.6%.</p>
 									<span className="slidercontainer">
 										<input name="conversionRate" type="range" min={conversionRate.min} max={conversionRate.max} value={conversionRate.value} className="slider" id="myRange" onChange={this.handleInputChange} step={conversionRate.step}/>
 										<div className="float-left min">

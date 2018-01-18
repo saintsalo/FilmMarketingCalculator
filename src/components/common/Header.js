@@ -3,18 +3,18 @@ import React, { Component } from 'react'
 export default class Header extends Component {
 	constructor(props){
 		super(props)
-		console.log(this.props.children);
 	}
 	render( ) {
+		const { title, description } = this.props;
 		return (
 			<div className="jumbotron jumbotron-fluid jumbotron-custom">
 				<div className="container">
 					<div className="row">
 						<div className="col-lg-12">
 							<h1 className="display-4">
-								Filmmaker ROI Calculator
+								{title}
 							</h1>
-							<p className="lead">A way to measure your Return on Investment when creating your new film!</p>
+							<p className="lead">{description}</p>
 						</div>
 					</div>
 				</div>
