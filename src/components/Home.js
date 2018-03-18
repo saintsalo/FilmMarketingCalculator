@@ -3,9 +3,15 @@ import React from 'react'
 import Header from './common/Header'
 import { Link } from 'react-router-dom'
 
+const Description = () => (
+	<span>Facebook Ad Calculator <br/>
+	Plan your Facebook ad budget and calculate your projected outcomes for your indie film release with these eary-to-use tools.
+	</span>
+)
+
 const Home = ( ) => (
 	<div>
-		<Header title="Smarthouse Creative Marketing Tools" description="We've put together some tools to help calculate your ROI for theatrical and vod releases."/>
+		<Header title="Smarthouse Creative Marketing Tools" description={<Description />}/>
 		<div className="container">
 			<div className="row">
 				<div className="col-lg-6 home-page-col">
@@ -16,14 +22,10 @@ const Home = ( ) => (
 						</Link>
 					</h2>
 					<hr/>
-					<p className="text-left">
-						Based on your social media budget and film we can help calculate the following for your next theatrical release:
+					<p className="text-left description-paragraph">
+						Develop a Facebook ad budget for the theatrical release of your indie film.
 					</p>
-					<ul className="text-left">
-						<li>Expected number of tickets sold</li>
-						<li>Expected number of clicks</li>
-						<li>Expected filmmaker revenue</li>
-					</ul>
+					<Link to="/theatrical" className="btn btn-primary">Get Started</Link>
 
 				</div>
 				<div className="col-lg-6 home-page-col">
@@ -34,15 +36,10 @@ const Home = ( ) => (
 						</Link>
 					</h2>
 					<hr/>
-					<p className="text-left">
-						Based on your social media budget and film we can help calculate the following for your Video on Demand release:
+					<p className="text-left description-paragraph">
+						Develop a Facebook ad for the VOD release of your indie film.
 					</p>
-					<ul className="text-left">
-						<li>Expected number of tickets sold</li>
-						<li>Expected number of VOD rentals</li>
-						<li>Expected number of VOD sales</li>
-						<li>Expected filmmaker revenue</li>
-					</ul>
+					<Link to="/vod" className="btn btn-primary">Get Started</Link>
 				</div>
 			</div>
 		</div>

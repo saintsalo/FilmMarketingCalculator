@@ -29,6 +29,14 @@ $slider-size: 20px;
 	cursor: pointer;
 }
 
+.slider:active::-webkit-slider-thumb {
+	background: #000000;
+}
+
+.slider:active::-moz-range-thumb {
+	background: #000000;
+}
+
 .slider::-moz-range-thumb {
 	width: $slider-size;
 	height: $slider-size;

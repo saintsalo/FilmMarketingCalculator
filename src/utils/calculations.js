@@ -6,6 +6,15 @@ export function calcEstimatedClicks(socialMediaBudget, costPerClick) {
 	return x;
 }
 
+// Calculate Tickets Available
+export function calcTicketCount(ticketsAvailable, screenings) {
+	console.log('a', ticketsAvailable);
+	console.log('b', screenings);
+	let x = ticketsAvailable * screenings;
+	x = parseInt(x);
+	return x;
+}
+
 // Calculate Tickets Sold
 export function calcTicketsSold(estimatedClicks, conversionRate, ticketCount) {
 	conversionRate = (conversionRate / 100);
