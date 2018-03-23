@@ -22,7 +22,11 @@ class Theme extends React.Component {
 					<NavBar/>
 					{children}
 				</div>
-
+				<div className="row information">
+					<div className="col-lg-12 text-center">
+						Want help with your theatrical or on-demand release? <br/>Contact us at <a href="mailto:heyyouguys@smarthousecreative.com" target="_top">heyyouguys@smarthousecreative.com</a> for a free quote!
+					</div>
+				</div>
 				<Footer />
 			</div>
 		);
