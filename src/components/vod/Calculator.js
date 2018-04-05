@@ -130,9 +130,9 @@ class CalculatorVideo extends Component {
 						<div className="form-group row">
 							<div className="col-sm-9">
 								<label className="col-form-label">
-									Facebook Ad Budget
+									Social Network Ad Budget
 								</label>
-								<p className="lead lead-header">What is your budget for Facebook ads?</p>
+								<p className="lead lead-header">What is your budget for social network ads?</p>
 								<span className="slidercontainer">
 									<input name="socialMediaBudget" type="range" min={socialMediaBudget.min} max={socialMediaBudget.max} value={socialMediaBudget.value} className="slider" id="myRange" onChange={this.handleInputChange} step={socialMediaBudget.step}/>
 									<div className="float-left min">

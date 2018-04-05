@@ -4,8 +4,8 @@ import Header from './common/Header'
 import { Link } from 'react-router-dom'
 
 const Description = () => (
-	<span>Facebook Ad Calculator <br/>
-	Plan your Facebook ad budget and calculate your projected outcomes for your indie film release with these eary-to-use tools.
+	<span>Ad Calculator <br/>
+	Plan your ad budget and calculate your projected outcomes for your indie film release with these easy-to-use tools.
 	</span>
 )
 
@@ -23,7 +23,7 @@ const Home = ( ) => (
 					</h2>
 					<hr/>
 					<p className="text-left description-paragraph">
-						Develop a Facebook ad budget for the theatrical release of your indie film.
+						Develop an ad budget for the theatrical release of your indie film.
 					</p>
 					<Link to="/theatrical" className="btn btn-primary">Get Started</Link>
 
@@ -37,7 +37,7 @@ const Home = ( ) => (
 					</h2>
 					<hr/>
 					<p className="text-left description-paragraph">
-						Develop a Facebook ad for the VOD release of your indie film.
+						Develop an ad for the VOD release of your indie film.
 					</p>
 					<Link to="/vod" className="btn btn-primary">Get Started</Link>
 				</div>
