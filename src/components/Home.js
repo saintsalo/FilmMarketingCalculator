@@ -4,14 +4,14 @@ import Header from './common/Header'
 import { Link } from 'react-router-dom'
 
 const Description = () => (
-	<span>Ad Calculator <br/>
-	Plan your ad budget and calculate your projected outcomes for your indie film release with these easy-to-use tools.
+	<span>
+	Plan your online ad budget and calculate projected outcomes for your film release with these easy-to-use tools.
 	</span>
 )
 
 const Home = ( ) => (
 	<div>
-		<Header title="Smarthouse Creative Marketing Tools" description={<Description />}/>
+		<Header title="Smarthouse Digital Ad Calculator" description={<Description />}/>
 		<div className="container">
 			<div className="row">
 				<div className="col-lg-6 home-page-col">
