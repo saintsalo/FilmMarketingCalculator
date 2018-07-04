@@ -8,8 +8,6 @@ export function calcEstimatedClicks(socialMediaBudget, costPerClick) {
 
 // Calculate Tickets Available
 export function calcTicketCount(ticketsAvailable, screenings) {
-	console.log('a', ticketsAvailable);
-	console.log('b', screenings);
 	let x = ticketsAvailable * screenings;
 	x = parseInt(x);
 	return x;
@@ -29,8 +27,13 @@ export function calcTicketsExcess(estimatedTicketsSold, ticketCount) {
 }
 
 export function calcFilmmakerRevenue(estimatedTicketsSold, ticketCount, ticketPrice, filmmakerCut) {
-	let tickets = (estimatedTicketsSold >= 0) ? ticketCount : estimatedTicketsSold;
+	//let tickets = (estimatedTicketsSold >= 0) ? ticketCount : estimatedTicketsSold;
+	let tickets = (estimatedTicketsSold >= ticketCount) ? ticketCount : estimatedTicketsSold;
+	//console.log("tickets is", parseInt(tickets));
 	filmmakerCut = (parseInt(filmmakerCut) / 100);
+	//console.log("ticket price is", parseInt(ticketPrice));
+	//console.log("filmmakerCut is", filmmakerCut);
+
 	let x = ((parseInt(tickets) * parseInt(ticketPrice)) * filmmakerCut);
 	return x;
 }
