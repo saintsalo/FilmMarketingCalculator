@@ -39,10 +39,9 @@ export function calcFilmmakerRevenue(estimatedTicketsSold, ticketCount, ticketPr
 }
 
 // VOD
-
 export function calcEstimatedVodSales(estimatedClicks, conversionRate, percent) {
 	conversionRate = (conversionRate / 100);
-	let x = (parseInt(estimatedClicks) * conversionRate) * percent;
+	let x = (parseInt(estimatedClicks) * conversionRate) * (percent / 100);
 	x = Math.floor(x);
 	return x;
 }
